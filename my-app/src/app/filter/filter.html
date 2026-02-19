@@ -1,0 +1,18 @@
+<div class="filter-container">
+  <span class="filter-label">Filter:</span>
+
+  <label>
+    <input type="radio" name="countryFilter" value="All" [(ngModel)]="selectedRadioButton" (change)="onRadioButtonChange()">
+    All<span>{{all}}</span>
+  </label>
+
+  <label>
+    <input type="radio" name="countryFilter" value="India" [(ngModel)]="selectedRadioButton" (change)="onRadioButtonChange()">
+    India<span>{{india}}</span>
+  </label>
+
+  <label>
+    <input type="radio" name="countryFilter" value="Others" [(ngModel)]="selectedRadioButton" (change)="onRadioButtonChange()">
+    Others<span>{{others}}</span>
+  </label>
+</div>

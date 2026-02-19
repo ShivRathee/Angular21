@@ -1,0 +1,12 @@
+<div class="search-container">
+  <h2>
+    <span>Search</span>
+    <input 
+      type="text" 
+      [(ngModel)]="value" 
+      (input)="sendTextValue()"
+      placeholder="Enter name..."
+    >
+    <span>{{value}}</span>
+  </h2>
+</div>

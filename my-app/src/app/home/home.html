@@ -1,0 +1,27 @@
+<div>
+    <app-search (textValue)="searchMembersBasedOnValues($event)"></app-search>
+    <app-filter [all]="getAllCountriesCount()" [india]="getIndiansCount()" [others]="getOtherCount()" (filterRadioButtonSelectedChange)="getSelectedFilterRadioButton($event)"></app-filter>
+</div>
+@if ( members.length > 0 ) {
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+    </tr>
+    @for (member of filteredMembers; track member.id) {
+    <tr [ngClass]="{'indian': member.country === 'India'}">
+        <td>{{member.id}}</td>
+        <td>{{member.name}}</td>
+        <td>{{member.company}}</td>
+        <td>{{member.contact}}</td>
+        <td>{{member.country}}</td>
+    </tr>
+    }
+</table>
+}
+@else {
+<p> No Data </p>
+}
