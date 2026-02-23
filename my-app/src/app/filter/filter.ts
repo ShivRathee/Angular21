@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { SetBackgroundDirective } from '../CustomDirective/setBackground.directive';
 
 @Component({
   selector: 'app-filter',
-  imports: [FormsModule],
+  imports: [FormsModule, SetBackgroundDirective],
   templateUrl: './filter.html',
   styleUrl: './filter.css',
 })
@@ -19,6 +20,10 @@ export class Filter {
 
   onRadioButtonChange() {
     this.filterRadioButtonSelectedChange.emit(this.selectedRadioButton);
+  }
+
+    sayHello() {
+    // console.log('Hello from Filter component !');
   }
 
 }

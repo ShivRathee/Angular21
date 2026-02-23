@@ -1,6 +1,7 @@
 <div>
     <app-search (textValue)="searchMembersBasedOnValues($event)"></app-search>
     <app-filter [all]="getAllCountriesCount()" [india]="getIndiansCount()" [others]="getOtherCount()" (filterRadioButtonSelectedChange)="getSelectedFilterRadioButton($event)"></app-filter>
+    {{filterComp.sayHello()}}
 </div>
 @if ( members.length > 0 ) {
 <table>

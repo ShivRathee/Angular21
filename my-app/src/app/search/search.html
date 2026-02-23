@@ -1,4 +1,4 @@
-<div class="search-container">
+<div class="search-container" appHighlight>
   <h2>
     <span>Search</span>
     <input 
@@ -9,4 +9,18 @@
     >
     <span>{{value}}</span>
   </h2>
+</div>
+
+
+<div class="Search-container-lifecycle" appHover>
+  <input type="text" #input >
+  <button (click)="onSubmit(input)" > Submit </button>
+  @if(destroyComponent){
+  <app-lifecycle [value]="inputValue">
+    <h2> This is for Ng Content example {{inputValue}}</h2>
+  </app-lifecycle>
+ }
+
+  <button (click)="destroyLifecycleComponent()">Destroy</button>
+
 </div>

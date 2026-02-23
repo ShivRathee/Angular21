@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Search } from '../search/search';
 import { Filter } from '../filter/filter';
@@ -11,6 +11,7 @@ import { Filter } from '../filter/filter';
   styleUrl: './home.css',
 })
 export class Home {
+  @ViewChild(Filter, {static:true}) filterComp !: Filter;
   members: any[] = [
     {
       id: 1,
