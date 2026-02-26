@@ -11,45 +11,45 @@ export class Lifecycle implements OnInit, OnChanges, DoCheck, AfterContentInit, 
   @Input() value = 'Lifecycle component';
 
   constructor() {
-    console.log('Constructor called');
+    // console.log('Constructor called');
 
     // console.log('Value in constructor: ', this.value);
   }
 
   ngOnInit() {
-    console.log('ngOnInit called');
+    // console.log('ngOnInit called');
 
     // console.log('Value in ngOnInit: ', this.value);
   }
 
   ngOnChanges() {
-    console.log('ngOnChanges called');
+    // console.log('ngOnChanges called');
 
   }
 
   ngDoCheck() {
-    console.log('ngDoCheck called');
+    // console.log('ngDoCheck called');
 
   }
 
   ngAfterContentInit() {
-    console.log('ngAfterContentInit called');
+    // console.log('ngAfterContentInit called');
   }
 
   ngAfterContentChecked() {
-    console.log('ngAfterContentChecked called');
+    // console.log('ngAfterContentChecked called');
   }
 
   ngAfterViewInit() {
-    console.log('ngAfterViewInit called');
+    // console.log('ngAfterViewInit called');
   }
   
   ngAfterViewChecked() {
-    console.log('ngAfterViewChecked called');
+    // console.log('ngAfterViewChecked called');
   }
 
   ngOnDestroy() {
-    console.log('ngOnDestroy called');
+    // console.log('ngOnDestroy called');
   }
 
 }

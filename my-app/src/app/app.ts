@@ -4,6 +4,7 @@ import { Header } from './header/header';
 import { Home } from './home/home';
 import { Footer } from './footer/footer';
 import { FormsModule } from '@angular/forms';
+import { UserService } from './Services/user.services';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './app.css'
 })
 export class App {
+
   protected readonly title = signal('my-app');
 
   @ViewChild('dobInput') dateOfBirth !: ElementRef ;

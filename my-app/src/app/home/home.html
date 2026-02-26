@@ -3,6 +3,9 @@
     <app-filter [all]="getAllCountriesCount()" [india]="getIndiansCount()" [others]="getOtherCount()" (filterRadioButtonSelectedChange)="getSelectedFilterRadioButton($event)"></app-filter>
     {{filterComp.sayHello()}}
 </div>
+<div>
+    <app-add-user></app-add-user>
+</div>
 @if ( members.length > 0 ) {
 <table>
     <tr>
